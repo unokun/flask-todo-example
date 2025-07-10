@@ -1,0 +1,26 @@
+{
+  "servers": {
+    "cotainer-use": {
+      "type": "stdio",
+      "command": "/home/unokun/.local/bin/cu",
+      "args": [
+        "stdio"
+      ],
+      "env": {}
+    },
+    "sqlite": { 
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-sqlite",
+        "--db-path",
+        "${workspaceFolder}/instance/db.sqlite"
+      ]
+    },
+      "playwright": {
+      "type": "stdio",
+      "command" :"npx",
+      "args":["@playwright/mcp@latest"]
+    }
+  }
+}
